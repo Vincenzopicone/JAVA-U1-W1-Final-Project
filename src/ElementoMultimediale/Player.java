@@ -7,14 +7,12 @@ import java.util.ArrayList;
 
 
 public class Player {
-    public static Random random = new Random();
     public static Scanner scanner = new Scanner(System.in);
    static ArrayList media = new ArrayList<>();
 
 
 
     public static void main(String[] args) {
-
 
         System.out.println("Crea 5 elementi!");
         for (int i = 0; i < 5; i++) {
@@ -47,10 +45,10 @@ public class Player {
             System.out.println("Cosa vuoi riprodurre? Scegli da 1 a 5.");
             numeroScelta = scanner.nextInt();
             if (numeroScelta > 0 && numeroScelta <= 5) {
-                switch (media.get(numeroScelta).getType()) {
-                    case Type.IMMAGINE -> ElementoMultimediale.show((Immagine) media.get(numeroScelta));
-                    case Type.VIDEO -> ElementoMultimediale.play((Video) media.get(numeroScelta));
-                    case Type.AUDIO -> ElementoMultimediale.play((Audio) media.get(numeroScelta));
+                switch (media.get(numeroScelta - 1).getType()) {
+                    case Type.IMMAGINE -> ElementoMultimediale.show((Immagine) media.get(numeroScelta - 1));
+                    case Type.VIDEO -> ElementoMultimediale.play((Video) media.get(numeroScelta - 1));
+                    case Type.AUDIO -> ElementoMultimediale.play((Audio) media.get(numeroScelta - 1));
                     default -> System.out.println("Il numero non è corretto!");
                 }
             }
