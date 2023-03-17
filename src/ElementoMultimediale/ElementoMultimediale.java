@@ -49,20 +49,12 @@ public class ElementoMultimediale {
         System.out.println("Aumenta luminosità di: ");
         int vol = Player.scanner.nextInt();
         elemento.luminosità = elemento.luminosità + vol;
-        System.out.println(elemento.titolo);
-
-        System.out.println("");
     };
 
     public static void diminuisciLuminosità(ElementoMultimediale elemento) {
         System.out.println("Diminuisci la luminosità: ");
         int vol = Player.scanner.nextInt();
         elemento.luminosità = elemento.luminosità - vol;
-        System.out.println(elemento.titolo);
-        for (int i = 0; i > elemento.luminosità  ; i++) {
-            System.out.print("!");
-        }
-        System.out.println("");
     };
 
 
