@@ -5,8 +5,8 @@ public class ElementoMultimediale {
     public int volume;
     public int durata;
     public int luminosità;
-    public static Type type;
-    public static Type getType() {
+    public Type type;
+    public Type getType() {
         return type;
     }
     public static void play(ElementoMultimediale elemento) {

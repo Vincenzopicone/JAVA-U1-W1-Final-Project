@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Player {
     public static Scanner scanner = new Scanner(System.in);
-   static ArrayList media = new ArrayList<>();
+   public static ArrayList media = new ArrayList<>();
 
 
 
@@ -40,26 +40,34 @@ public class Player {
 
         }
 
-       /*int numeroScelta = 0;
+
+
+      int numeroScelta = 0;
         while (true) {
             System.out.println("Cosa vuoi riprodurre? Scegli da 1 a 5.");
             numeroScelta = scanner.nextInt();
             if (numeroScelta > 0 && numeroScelta <= 5) {
-                switch (media.get(numeroScelta - 1).getType()) {
-                    case Type.IMMAGINE -> ElementoMultimediale.show((Immagine) media.get(numeroScelta - 1));
-                    case Type.VIDEO -> ElementoMultimediale.play((Video) media.get(numeroScelta - 1));
-                    case Type.AUDIO -> ElementoMultimediale.play((Audio) media.get(numeroScelta - 1));
-                    default -> System.out.println("Il numero non è corretto!");
+                if (media.get(numeroScelta - 1) == Type.IMMAGINE) {
+                    ElementoMultimediale.show((Immagine) media.get(numeroScelta - 1));
+                } else if (media.get(numeroScelta - 1) == Type.VIDEO) {
+                    ElementoMultimediale.play((Video) media.get(numeroScelta - 1));
+                } else if (media.get(numeroScelta - 1) == Type.AUDIO) {
+                    ElementoMultimediale.play((Audio) media.get(numeroScelta - 1));
                 }
+            } else {
+                System.out.println("");
+
             }
-        }*/
+        }
+
+        /////// non capisco dove sbaglio qui sopra ^^^^^
 
 
 
     }
 
 
-      
+
 
 
 
