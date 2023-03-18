@@ -41,28 +41,24 @@ public class Player {
         }
 
 
-
+        System.out.println(media.get(3));
       int numeroScelta = 0;
         while (true) {
             System.out.println("Cosa vuoi riprodurre? Scegli da 1 a 5.");
             numeroScelta = scanner.nextInt();
             if (numeroScelta > 0 && numeroScelta <= 5) {
-                if (media.get(numeroScelta - 1) == Type.IMMAGINE) {
-                    ElementoMultimediale.show((Immagine) media.get(numeroScelta - 1));
-                } else if (media.get(numeroScelta - 1) == Type.VIDEO) {
-                    ElementoMultimediale.play((Video) media.get(numeroScelta - 1));
-                } else if (media.get(numeroScelta - 1) == Type.AUDIO) {
-                    ElementoMultimediale.play((Audio) media.get(numeroScelta - 1));
+                if (media.get(numeroScelta - 1).getClass().equals(Immagine.class)) {
+                    ElementoMultimediale.show((Immagine)media.get(numeroScelta - 1));
+                } else if (media.get(numeroScelta - 1).getClass().equals(Video.class)) {
+                    ElementoMultimediale.play((Video)media.get(numeroScelta - 1));
+                } else if (media.get(numeroScelta - 1).getClass().equals(Audio.class)) {
+                    ElementoMultimediale.play((Audio)media.get(numeroScelta - 1));
                 }
             } else {
                 System.out.println("");
 
             }
         }
-
-        /////// non capisco dove sbaglio qui sopra ^^^^^
-
-
 
     }
 

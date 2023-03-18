@@ -6,9 +6,7 @@ public class ElementoMultimediale {
     public int durata;
     public int luminosità;
     public Type type;
-    public Type getType() {
-        return type;
-    }
+
     public static void play(ElementoMultimediale elemento) {
         System.out.println("Titolo: "+ elemento.titolo);
         for (int i = 0; i < elemento.volume; i++) {
